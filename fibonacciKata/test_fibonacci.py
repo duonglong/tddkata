@@ -20,4 +20,4 @@ class TestFibonacciAt(unittest.TestCase):
         self.assertEqual(n3, 2)
 
     def test_fibonacci_at_negative(self):
-        self.assertRaises(RuntimeError, fibonacci.fibonacci_at, -1)
+        self.assertRaises(ValueError, fibonacci.fibonacci_at, -1)
