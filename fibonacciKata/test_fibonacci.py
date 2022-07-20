@@ -1,5 +1,5 @@
 import unittest
-fibonacci = __import__('fibonacci')
+import fibonacciKata.fibonacci as fibonacci
 
 
 class TestFibonacciAt(unittest.TestCase):
@@ -19,5 +19,8 @@ class TestFibonacciAt(unittest.TestCase):
         n3 = fibonacci.fibonacci_at(3)
         self.assertEqual(n3, 2)
 
-    def test_fibonacci_at_negative(self):
+    def test_fibonacci_at_negative1(self):
         self.assertRaises(ValueError, fibonacci.fibonacci_at, -1)
+
+    def test_fibonacci_at_negative2(self):
+        self.assertRaises(ValueError, fibonacci.fibonacci_at, -2)
